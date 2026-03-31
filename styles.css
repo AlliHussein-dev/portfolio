@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope');
+
+:root {
+    --text-color:black;
+    --color-1: white;
+    --color-2: dodgerblue;
+    --color-3: #b0b1e2;
+    --color-4: lightgray;
+    --footer-color: #02073d;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: lightgray;
+    margin: 0;
+    padding: 0;
+    font-family:  'Manrope', sans-serif;
+
+}
+
+.open-side-bar, .close-side-bar {
+    width: 32px;
+}
+
+.logo{
+    width: 3rem;
+}
+
+ header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-1);
+    box-shadow: 0 5px 12px rgb(0,0,0,0.4);
+    padding: .5rem 3rem;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+
+ } 
+
+ nav {
+    
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+ 
+ }
+
+ .links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+ }
+
+ nav a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: capitalize;
+ }
+
+ nav a:hover,
+ nav a:focus {
+    color: var(--color-2);   
+ }
+
+nav svg {
+    fill: var(--text-color);
+}
+
+.open-side-bar, .close-side-bar,  .sidebar-menu {
+    display: none;
+}
+
+
+/* main part one */
+
+.identity-container {
+    width: 100%;
+    background: var(--color-3);
+    padding: 2rem;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.person {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100px;
+    background: var(--color-1);
+    order: -1;
+    
+}
+
+.description h1 {
+    color: var(--color-2);
+    font-size: 1.6rem;
+}
+
+.description h3 {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.description h4 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.description p {
+    margin-bottom: .8rem;
+    letter-spacing: 1px;
+}
+
+.buttons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  
+}
+
+.btn {
+    outline: none;
+    padding: .5rem 1rem;
+    background: var(--color-2);
+    border: none;
+    border-radius: 30px;
+    text-transform: capitalize;
+    color: var(--color-1);
+  
+}
+
+.buttons a {
+    text-decoration: none;
+    border: 1.8px solid var(--color-2);
+    padding: .3rem .9rem;
+    border-radius: 30px;
+    color: var(--text-color);
+
+}
+
+.buttons a:hover,
+.buttons a:focus {
+    background: var(--color-2);
+    border: none;
+    border-radius: 30px;
+    text-transform: capitalize;
+    color: var(--color-1);
+
+}
+
+
+/* aside*/
+
+.aside-main {
+    width: 90%;
+    max-width: 700px;
+    position: absolute; 
+    bottom: 80%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background: white;
+    border-radius: 50px;
+    padding: 0.5rem .6rem;
+    
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    
+    font-size: 12px;
+    gap: 1rem;
+    display: none;    
+}
+   
+
+
+.projects, .learning-time, .availability {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px; 
+
+  
+}
+.icon {
+    width: 25px;
+    fill: var(--color-2);
+
+}
+
+.paragraphs {
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraphs p:nth-of-type(1) {
+    font-weight: 900;
+    text-transform: capitalize;
+
+
+}
+.paragraphs p:nth-of-type(2) {
+    font-weight: 900;
+    text-transform: capitalize;
+    color: var(--color-4);
+
+
+}
+
+/* article */
+
+.intro-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-1);
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+
+}
+
+.intro-image {
+    width: 100px;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+}
+
+.my-intro {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.my-intro > p:first-of-type {
+    text-align: start;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    color: var(--color-2);
+    font-weight: 900;
+    margin-top: 20px;
+    display: none; 
+}
+
+.my-intro h1 {
+    text-transform: capitalize;
+    color: var(--color-2);
+}
+
+#contact {
+   display: flex;
+   flex-direction: column; 
+    gap: 0.4rem; 
+    font-style: normal;           
+    font-weight: 600;        
+    color: var(--text-color); 
+    font-size: 0.9rem;      
+    text-align: center;       
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+}
+
+#contact a {
+    color: var(--color-2);
+    text-decoration: none;
+}
+
+#contact a:hover,
+#contact a:focus {
+    text-decoration: underline var(--color-2);
+    cursor: pointer;
+
+}
+
+/* progress bar */
+
+.progress-section {
+    background: beige;
+    padding: 2rem;
+    width: 100%;
+    
+}
+
+.progress-section > h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+
+}
+.progress1-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 1rem;
+    flex-wrap: wrap;
+    display: none; 
+}
+
+.progress1-container .progress {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background:  conic-gradient(var(--clr) calc(var(--i) * 1%), #444 0);
+    text-transform: capitalize;
+    color: white;
+}
+
+
+.progress h3 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5em;
+    z-index: 1;
+    font-weight: 500;
+
+}
+
+.progress1-container .progress h3 span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.progress h4 {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    font-weight: 500;
+
+}
+
+.progress1-container .progress::before {
+    content: "";
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
+}
+
+.progress1-container .progress::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: #222;
+}
+
+/* ==================progress for big screen================ */
+
+.progress2-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 3rem;
+    flex-wrap: wrap;
+    /* display: none; */
+  
+    
+}
+
+.progress2-container .progress2 {
+    width: 100%;
+    max-width: 400px;
+    height: 6px;
+    border-radius: 10px;
+    position: relative;
+    background:  #444;
+    text-transform: capitalize;
+    color: black;
+
+}
+
+.progress2 h3 {
+    position: absolute;
+    top: -1.5rem;
+    left: 90%;
+} 
+
+.progress2 h4 {
+    position: absolute;
+    top: -1.5rem;
+    left: 7%;
+}
+
+
+.progress2 img {
+    width: 30px;
+    position: absolute;
+    left: -.2rem;
+    top: -1.5rem;
+   
+}
+
+
+
+
+.progress2-container .progress2::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: calc(var(--i) * 1%);  
+    background-color: var(--clr);
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    transition: width 1s ease;
+}
+
+
+ .progress2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+} 
+
+
+/* [[[[[[[[[[[[[[[[section projects]]]]]]]]]]]]] */
+
+.projects-section {
+    padding: 2rem;
+    background: var(--color-1);
+}
+
+.projects-section > h1 {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+
+
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 1.5rem;
+    height: auto;
+    gap: 1rem;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    background: var(--color-1);
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  
+
+}
+
+.project img {
+    width: 100%;       
+    height: auto;       
+    object-fit: cover; 
+    display: block; 
+    
+}
+
+.project p, .project a {
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+}
+
+.project a {
+   text-decoration: none;
+   color: var(--color-1);
+   background: var(--color-2);
+   border-radius: 5px;
+   width: 80%;
+   margin-bottom: 10px;
+   height: auto;
+   text-align: center;
+}
+
+.project:hover {
+    transform: translate(6px,-8px);
+    transition: .75s ease;
+}
+
+.project a, .project a span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.icon2 {
+    width: 20px;
+    fill: var(--color-1);
+}
+
+
+/* ]]]]]]]]]]]]contact section]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
+.get-in-touch-section {
+    width: 100%;
+    background: var(--color-1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+}
+
+.contct {
+    display: flex;
+    align-items: flex-start;
+    gap: 3px;
+
+}
+
+
+
+
+.icon3 {
+    width: 30px;
+    fill: var(--color-2);
+}
+
+
+.left form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column; 
+    gap: .75rem;
+}
+
+.name, .email {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.name input, .email input {
+    outline: none;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}
+
+.userfill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.text-area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.text-area textarea {
+    padding: .3rem .6rem;
+}
+
+.left button {
+    padding: .3rem .6rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--color-2);
+    color: var(--color-1);
+    font-weight: 900;
+}
+
+.footer-container {
+    padding: 2rem;
+    background: var(--footer-color);
+    color: var(--color-1);
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 6px;
+
+}
+
+.icon4 {
+    width: 20px;
+    fill: var(--color-1);
+}
+/* ====================media queries================== */
+
+/* ++++++++++++mobile++++++++++++++ */
+
+@media (max-width: 560px) {
+   .links-container {
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 200px;
+      z-index: 10;
+      background:  rgba(211, 211, 211, 0.285);
+      backdrop-filter: blur(12px);
+      transition: 0.75s ease;
+    
+
+    } 
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        color: var(--text-color);
+       
+        
+    }
+
+    .open-side-bar, .close-side-bar {
+        display: block;
+        fill: black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+    }
+    #side-bar:checked ~ .links-container {
+        right: 0;
+
+    }
+
+    nav a:hover {
+        background: var(--color-2);
+        color: var(--color-1);
+    }
+
+    .progress2-container {
+        display: none;
+    }
+
+    .progress1-container {
+        display: flex;
+    }
+      
+}
+
+ @media (min-width:750px) {
+    .identity-container {
+        flex-direction: row;
+        position: relative; /* make aside-main position relative to this */
+        gap: 2rem; 
+
+    }
+
+    .person {
+        width: 400px;
+        height: 400px;
+        border-radius: none;
+        order: 1;
+        width: 40%;
+
+    }
+
+    .description {
+        width: 60%;
+    }
+
+    .aside-main {
+        display: flex;
+        position: absolute;
+        bottom: -45px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 700px;
+        padding: 0.5rem 0.6rem;
+        border-radius: 50px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        gap: 1rem;
+        z-index: 10;
+      
+    }
+} 
