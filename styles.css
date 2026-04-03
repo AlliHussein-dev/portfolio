@@ -22,6 +22,7 @@ body {
     margin: 0;
     padding: 0;
     font-family:  'Manrope', sans-serif;
+     overflow-x: hidden; 
 
 }
 
@@ -74,12 +75,15 @@ body {
     text-decoration: none;
     color: var(--text-color);
     text-transform: capitalize;
+    position: relative;
  }
 
  nav a:hover,
  nav a:focus {
     color: var(--color-2);   
  }
+
+
 
 nav svg {
     fill: var(--text-color);
@@ -264,13 +268,13 @@ nav svg {
 }
 
 .my-intro > p:first-of-type {
-    text-align: start;
+    text-align: center;
     text-transform: capitalize;
     letter-spacing: 1.5px;
     color: var(--color-2);
     font-weight: 900;
     margin-top: 20px;
-    display: none; 
+     display: none;  
 }
 
 .my-intro h1 {
@@ -367,22 +371,14 @@ nav svg {
 
 }
 
-.progress1-container .progress::before {
-    content: "";
-    display: block;
-    height: 100%;
-    margin-left: 50%;
-    transform-origin: left;
-    border-radius: 0 100% 100% 0/50%;
-}
 
 .progress1-container .progress::after {
     content: "";
     position: absolute;
-    inset: 6px;
+    inset: 5px;
     border-radius: 50%;
     background: #222;
-}
+} 
 
 /* ==================progress for big screen================ */
 
@@ -434,7 +430,7 @@ nav svg {
 
 
 
-.progress2-container .progress2::before {
+ .progress2-container .progress2::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -444,7 +440,7 @@ nav svg {
     top: 0;
     left: 0;
     transition: width 1s ease;
-}
+} 
 
 
  .progress2 {
@@ -545,6 +541,8 @@ nav svg {
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
+    box-sizing: border-box;
+   
 
 }
 
@@ -645,6 +643,15 @@ nav svg {
     width: 20px;
     fill: var(--color-1);
 }
+
+ .name input,
+.email input,
+.text-area textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 /* ====================media queries================== */
 
 /* ++++++++++++mobile++++++++++++++ */
@@ -722,6 +729,22 @@ nav svg {
     .description {
         width: 60%;
     }
+
+    nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    transition: .75s ease ;
+    background-color: var(--color-2);
+
+ }
+
+    nav a:hover::after {
+    width: 100%;
+ }
 
  
 } 
